@@ -1,0 +1,75 @@
+@import "src/styles.scss";
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+.search-wrapper {
+  overflow: hidden;
+  width: 300px;
+  white-space: nowrap;
+  padding-top: 20px;
+}
+
+#search {
+  max-width: 300px;
+  height: 50px;
+  background: $secondary-color;
+  border: none;
+  font-size: 120%;
+  float: left;
+  padding-left: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@include placeholder {
+  color: $font-color;
+}
+
+.icon {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border: none;
+  background: $highlight-color;
+  height: 50px;
+  width: 50px;
+  color: $secondary-color;
+  opacity: 0;
+  font-size: 150%;
+
+  -webkit-transition: all 0.55s ease;
+  -moz-transition: all 0.55s ease;
+  -ms-transition: all 0.55s ease;
+  -o-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+
+.search-wrapper:hover button.icon,
+.search-wrapper:active button.icon,
+.search-wrapper:focus button.icon {
+  outline: none;
+  opacity: 1;
+  margin-left: -50px;
+}
+
+.search-wrapper:hover button.icon:hover {
+  background: lighten($highlight-color, 25%);
+}
