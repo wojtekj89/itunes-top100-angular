@@ -18,7 +18,7 @@ export class AlbumListComponent implements OnInit {
         let album: Album = new Album(
           element["im:name"].label,
           element["im:image"][2].label,
-          element["im:releaseDate"].label,
+          element["im:releaseDate"].attributes.label,
           element["im:artist"].label
         );
         this.albums.push(album);
