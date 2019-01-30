@@ -12,16 +12,3 @@
   text-align: center;
   margin: 20px 0px 0px 20px;
 }
-
-.album-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-
-.album-item {
-  background-color: $secondary-color;
-  width: 190px;
-  height: 200px;
-  margin: 40px;
-}
