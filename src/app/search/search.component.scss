@@ -22,7 +22,7 @@
   padding-top: 20px;
 }
 
-#search {
+#searchInput {
   max-width: 300px;
   height: 50px;
   background: $secondary-color;
@@ -33,6 +33,7 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  color: $font-color;
 }
 
 @include placeholder {

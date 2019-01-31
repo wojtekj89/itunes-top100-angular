@@ -1,4 +1,9 @@
 <div class="search-wrapper">
-  <input type="search" id="search" placeholder="Search..." />
-  <button class="icon"><i class="fa fa-search"></i></button>
+  <input
+    (keyup)="onKeyup($event)"
+    type="search"
+    id="searchInput"
+    placeholder="Search..."
+  />
+  <button class="icon" (click)="clear()"><i class="fa fa-times"></i></button>
 </div>

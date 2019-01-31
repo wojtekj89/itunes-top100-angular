@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { SearchService } from "../services/search.service";
 
 @Component({
   selector: "app-search",
@@ -6,7 +7,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./search.component.scss"]
 })
 export class SearchComponent implements OnInit {
-  constructor() {}
+  constructor(private fs: SearchService) {}
 
   ngOnInit() {}
+
+  onKeyup(event) {
+    this.fs.updateFilter(searchInput.value);
+  }
+
+  clear() {
+    this.fs.updateFilter("");
+    searchInput.value = "";
+  }
 }

@@ -1,3 +1,11 @@
 <div class="list-wrapper">
-  <app-album-item *ngFor="let album of albums" [album]="album"></app-album-item>
+  <div class="list" *ngIf="filteredAlbums.length; else elseBlock">
+    <app-album-item
+      *ngFor="let album of filteredAlbums"
+      [album]="album"
+    ></app-album-item>
+  </div>
+  <ng-template #elseBlock>
+    <div class="no-result">No results found...</div>
+  </ng-template>
 </div>
