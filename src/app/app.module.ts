@@ -6,6 +6,7 @@ import { SearchComponent } from "./search/search.component";
 import { AlbumListComponent } from "./album-list/album-list.component";
 import { AlbumItemComponent } from "./album-item/album-item.component";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
     AlbumListComponent,
     AlbumItemComponent
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

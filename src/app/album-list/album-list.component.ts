@@ -18,6 +18,7 @@ export class AlbumListComponent implements OnInit {
     this.fs.currentFilter.subscribe(filter => {
       //console.log(filter);
       this.filteredAlbums = this.albums.filter(x => {
+        filter = filter.toLocaleLowerCase();
         const searchFields = [
           x.name.toLocaleLowerCase(),
           x.artist.toLocaleLowerCase()

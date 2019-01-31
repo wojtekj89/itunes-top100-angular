@@ -7,16 +7,17 @@ import { SearchService } from "../services/search.service";
   styleUrls: ["./search.component.scss"]
 })
 export class SearchComponent implements OnInit {
+  searchFilter: string = "";
   constructor(private fs: SearchService) {}
 
   ngOnInit() {}
 
   onKeyup(event) {
-    this.fs.updateFilter(searchInput.value);
+    this.fs.updateFilter(this.searchFilter);
   }
 
   clear() {
     this.fs.updateFilter("");
-    searchInput.value = "";
+    this.searchFilter = "";
   }
 }

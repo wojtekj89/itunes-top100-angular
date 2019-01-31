@@ -1,8 +1,9 @@
 <div class="search-wrapper">
   <input
+    [(ngModel)]="searchFilter"
     (keyup)="onKeyup($event)"
     type="search"
-    id="searchInput"
+    id="search"
     placeholder="Search..."
   />
   <button class="icon" (click)="clear()"><i class="fa fa-times"></i></button>
