@@ -16,25 +16,22 @@ export class AlbumListComponent implements OnInit {
 
   ngOnInit() {
     this.fs.currentFilter.subscribe(filter => {
-      //console.log(filter);
       this.filteredAlbums = this.albums.filter(x => {
         filter = filter.toLocaleLowerCase();
         const searchFields = [
           x.name.toLocaleLowerCase(),
           x.artist.toLocaleLowerCase()
         ];
-        //console.log(searchFields);
         let results = searchFields.map(x => x.indexOf(filter));
-        //console.log(results);
-        //console.log(results.find(x => x >= 0));
+        // adding +1 because finds return 0 on positive
         if (results.find(x => x >= 0) + 1) return true;
       });
-      //console.log(this.filteredAlbums.length);
     });
     this.as.getAlbums().subscribe(result => {
       result.feed.entry.forEach(element => {
         let album: Album = new Album(
           element["im:name"].label,
+          // [2] for 170px image size, previous items are smaller
           element["im:image"][2].label,
           element["im:releaseDate"].attributes.label,
           element["im:artist"].label

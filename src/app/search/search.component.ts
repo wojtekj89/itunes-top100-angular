@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {}
 
   onKeyup(event) {
-    this.fs.updateFilter(this.searchFilter);
+    this.fs.updateFilter(event.target.value);
   }
 
   clear() {
