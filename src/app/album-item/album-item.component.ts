@@ -11,4 +11,8 @@ export class AlbumItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  preview(url) {
+    window.location.href = url;
+  }
 }

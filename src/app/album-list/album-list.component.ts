@@ -34,7 +34,8 @@ export class AlbumListComponent implements OnInit {
           // [2] for 170px image size, previous items are smaller
           element["im:image"][2].label,
           element["im:releaseDate"].attributes.label,
-          element["im:artist"].label
+          element["im:artist"].label,
+          element.link.attributes.href
         );
         this.albums.push(album);
       });
