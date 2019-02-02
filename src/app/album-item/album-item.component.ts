@@ -12,7 +12,7 @@ export class AlbumItemComponent implements OnInit {
 
   ngOnInit() {}
 
-  preview(url) {
+  preview(url: string) {
     window.location.href = url;
   }
 }
