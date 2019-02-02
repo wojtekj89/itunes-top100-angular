@@ -22,14 +22,16 @@ export class AlbumListComponent implements OnInit {
           x.name.toLocaleLowerCase(),
           x.artist.toLocaleLowerCase()
         ];
-        let results = searchFields.map(x => x.indexOf(filter));
+        const results = searchFields.map(result => result.indexOf(filter));
         // adding +1 because finds return 0 on positive
-        if (results.find(x => x >= 0) + 1) return true;
+        if (results.find(result => result >= 0) + 1) {
+          return true;
+        }
       });
     });
     this.as.getAlbums().subscribe(result => {
       result.feed.entry.forEach(element => {
-        let album: Album = new Album(
+        const album: Album = new Album(
           element["im:name"].label,
           // [2] for 170px image size, previous items are smaller
           element["im:image"][2].label,

@@ -7,7 +7,7 @@ import { SearchService } from "../services/search.service";
   styleUrls: ["./search.component.scss"]
 })
 export class SearchComponent implements OnInit {
-  searchFilter: string = "";
+  searchFilter: string;
   constructor(private fs: SearchService) {}
 
   ngOnInit() {}
