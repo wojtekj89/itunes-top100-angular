@@ -1,5 +1,5 @@
 # ItunesTop100Angular
-
+Simple web application displaying top 100 albums on iTunes.com. After choosing one you will be redirected to the album profile on iTunes.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
 ## Development server
