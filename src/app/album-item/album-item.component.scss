@@ -1,5 +1,5 @@
 @import "src/styles.scss";
-//455 one col
+
 .album-item {
   width: 170px;
   margin: 25px;
@@ -58,5 +58,23 @@ img {
     color: $highlight-color;
     white-space: normal;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .album-item {
+    margin: auto;
+    width: 300px;
+    margin-bottom: 100px;
+  }
+
+  img {
+    width: 250px;
+    margin-bottom: 5px;
+  }
+
+  .album-card {
+    width: 240px;
+    margin-left: 0px;
   }
 }
